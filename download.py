@@ -1,6 +1,3 @@
-# Command :
-# pyinstaller --onefile --add-binary ".\ffmpeg.exe;." --add-binary ".\yt-dlp.exe;." .\download.py
-
 import subprocess
 import re
 import traceback
@@ -13,7 +10,6 @@ def get_executable_path(file_name):
     return os.path.join(os.getcwd(), file_name)  # Local directory for scripts
 
 def is_valid_url(url):
-    # Simple regex to validate URL
     regex = re.compile(
         r'^(https?://)'  # http:// or https://
         r'([a-zA-Z0-9.-]+)'  # domain name
